@@ -1,0 +1,14 @@
+{% include 'cabecera.html' %}
+
+
+<form action="/resolver" method="POST" enctype="multipart/form-data">
+    <h2>Respuesta:</h2>
+
+    <textarea rows="50" cols="50" class="form-control" readonly>{{ respuesta_generada }}</textarea>
+    
+</form>
+
+
+
+
+{% include 'pie_pag.html' %}

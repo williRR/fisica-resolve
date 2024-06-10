@@ -1,0 +1,52 @@
+body {
+    background-color: #ADD8E6;
+    color: #000000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: relative; /* Añade posición relativa al cuerpo */
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.btn.btn-primary {
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+}
+footer {
+    width: 100%;
+    background-color: #282C34;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto; /* Centra horizontalmente */
+    margin-right: auto; /* Centra horizontalmente */
+}
+
+
+footer a {
+    color: #61dafb;
+}
+
+/* Muestra el footer solo cuando se desplaza al final de la página */
+body::after {
+    content: "";
+    display: block;
+    height: 50px; /* Altura del footer */
+}
