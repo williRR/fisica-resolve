@@ -4,9 +4,14 @@ import os
 
 
 app = Flask(__name__)
-# configurar variable de entorno 
+# Configurar variable de entorno
 clave = os.environ.get('clave')
-print("hola")
+
+if not clave:
+    raise ValueError("La variable de entorno 'clave' no está definida. Asegúrate de configurarla antes de ejecutar la aplicación.")
+
+app.secret_key = clave  # Usar la clave API como clave de sesión
+
 
 @app.route('/')
 def mostrar_formulario():
